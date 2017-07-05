@@ -3,6 +3,7 @@
     <DisplayName>ExtractBrandName</DisplayName>
     <Properties/>
     <URIPath>
-        <Pattern>/{brandName}/{o}/{org}/**</Pattern>
+        <Pattern>/{brandName}/{o}/{orgName}</Pattern>
+        <Pattern>/{brandName}/{o}/{orgName}/**</Pattern>
     </URIPath>
 </ExtractVariables>
