@@ -11,17 +11,15 @@
                 <Condition>javascript.GetSourceAttValue.failed = true</Condition>
             </Step>
         </FaultRule>
-        <DefaultFaultRule name="default-fault">
-            <Step>
-                <Name>LogProxyError</Name>
-            </Step>
-            <Step>
-                <Step>
-                    <Name>Raise-Fault-ProcessingError</Name>
-                </Step>
-            </Step>
-        </DefaultFaultRule>
     </FaultRules>
+    <DefaultFaultRule name="default-fault">
+        <Step>
+            <Name>LogProxyError</Name>
+        </Step>
+        <Step>
+            <Name>Raise-Fault-ProcessingError</Name>
+        </Step>
+    </DefaultFaultRule>
     <PreFlow name="PreFlow">
         <Request>
             <Step>
@@ -31,11 +29,11 @@
                 <Name>ExtractBrandName</Name>
             </Step>
             <Step>
-                <Name>ReadKVMs</Name>
+                <Name>Raise-Fault-InvalidOrganization</Name>
+                <Condition>orgName != organization.name</Condition>
             </Step>
             <Step>
-                <Name>Raise-Fault-InvalidOrganization</Name>
-                <Condition>org!=organization.name</Condition>
+                <Name>ReadKVMs</Name>
             </Step>
             <Step>
                 <Name>GetSourceAttValue</Name>

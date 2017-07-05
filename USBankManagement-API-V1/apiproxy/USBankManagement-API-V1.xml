@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="16" name="USBankManagement-API-V1">
+<APIProxy revision="18" name="USBankManagement-API-V1">
     <Basepaths>/getdevelopersapps</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1497418183043</CreatedAt>
+    <CreatedAt>1499157414797</CreatedAt>
     <CreatedBy>defaultUser</CreatedBy>
     <Description>show all developer apps which have custom attribute “source=env"</Description>
     <DisplayName>GetDevelopersApps</DisplayName>
-    <LastModifiedAt>1497418183043</LastModifiedAt>
+    <LastModifiedAt>1499157414797</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
     <Policies>
         <Policy>CheckingCustomAttribute</Policy>

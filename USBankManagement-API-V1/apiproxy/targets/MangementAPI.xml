@@ -13,9 +13,6 @@
             <Name>Raise-Fault-Invalid-Authorization</Name>
             <Condition>response.status.code=401</Condition>
         </Step>
-        <Step>
-            <Name>Raise-Fault-ProcessingError</Name>
-        </Step>
     </DefaultFaultRule>
     <PreFlow name="PreFlow">
         <Request>
