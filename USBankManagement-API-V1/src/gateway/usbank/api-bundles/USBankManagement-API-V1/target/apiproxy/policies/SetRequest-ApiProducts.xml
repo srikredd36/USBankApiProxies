@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="SetRequest-ApiProducts">
+    <DisplayName>SetRequest-ApiProducts</DisplayName>
+    <Properties/>
+    <Set>
+        <QueryParams>
+            <QueryParam name="attributename">{QueryString.name}</QueryParam>
+            <QueryParam name="attributevalue">{QueryString.value}</QueryParam>
+        </QueryParams>
+    </Set>
+</AssignMessage>

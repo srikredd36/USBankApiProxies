@@ -1,0 +1,21 @@
+[
+    {
+		"encrypted": false,
+		"entry": [
+		{
+				"name": "CustomAttributeValues",
+				"value":"{ \"elavon\" : \"elavon\", \"usb\" : \"usb\", \"elan\":\"elan\" ,\"fsv\" : \"fsv\" }"
+		},
+		{
+				"name": "CustomAttributeName",
+				"value": "source"
+		},
+		{
+				"name": "ManagementServicePath",
+				"value": "\v1"
+		}
+		
+		],
+		"name": "ApigeeManagementServiceProxy-v1"
+	}
+]

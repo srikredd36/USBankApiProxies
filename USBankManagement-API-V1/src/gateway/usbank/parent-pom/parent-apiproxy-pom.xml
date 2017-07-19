@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>apigee</groupId>
+	<artifactId>parent-apiproxy-pom</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0</version>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>central</id>
+			<name>Maven Plugin Repository</name>
+			<url>http://repo1.maven.org/maven2</url>
+			<layout>default</layout>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+		</pluginRepository>
+		
+	</pluginRepositories>
+ 
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<id>copy-resources-step</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<!-- this is important -->
+							<overwrite>true</overwrite>
+							<!-- target -->
+							<outputDirectory>${basedir}/target/apiproxy</outputDirectory>
+							<resources>
+								<resource>
+									<!-- source -->
+									<directory>apiproxy</directory>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+              <groupId>io.apigee.build-tools.enterprise4g</groupId>
+              <artifactId>apigee-edge-maven-plugin</artifactId>
+              <version>1.1.5</version>
+              <executions>
+					<execution>
+						<id>configure-bundle-step</id>
+						<phase>package</phase>
+						<goals>
+							<goal>configure</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>deploy-bundle-step</id>
+						<phase>install</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+<!-- This is where you add the environment specific properties under various profile names -->		
+	<profiles>
+		<profile>
+			<id>fsv-it</id>
+			<properties>
+				<apigee.profile>fsv-it</apigee.profile>
+				<apigee.env>fsv-it</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+			
+		<profile>
+			<id>elan-dev</id>
+			<properties>
+				<apigee.profile>elan-dev</apigee.profile>
+				<apigee.env>elan-dev</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>elan-it</id>
+			<properties>
+				<apigee.profile>elan-it</apigee.profile>
+				<apigee.env>elan-it</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+			
+		<profile>
+			<id>elavon-dev</id>
+			<properties>
+				<apigee.profile>elavon-dev</apigee.profile>
+				<apigee.env>elavon-dev</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+		<profile>
+			<id>elavon-it</id>
+			<properties>
+				<apigee.profile>elavon-it</apigee.profile>
+				<apigee.env>elavon-it</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+		<profile>
+			<id>fsv-dev</id>
+			<properties>
+				<apigee.profile>fsv-dev</apigee.profile>
+				<apigee.env>fsv-dev</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+		<profile>
+			<id>super-dev</id>
+			<properties>
+				<apigee.profile>super-dev</apigee.profile>
+				<apigee.env>super-dev</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>	
+		<profile>
+			<id>super-it</id>
+			<properties>
+				<apigee.profile>super-it</apigee.profile>
+				<apigee.env>super-it</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+		<profile>
+			<id>usb-dev</id>
+			<properties>
+				<apigee.profile>usb-dev</apigee.profile>
+				<apigee.env>usb-dev</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+		<profile>
+			<id>usb-it</id>
+			<properties>
+				<apigee.profile>usb-it</apigee.profile>
+				<apigee.env>usb-it</apigee.env>
+				<apigee.hosturl>https://api.enterprise.apigee.com</apigee.hosturl>
+				<apigee.apiversion>v1</apigee.apiversion> <!-- value of version in  https://api.enterprise.apigee.com/v2 -->
+				<apigee.org>${org}</apigee.org>
+				<apigee.username>${username}</apigee.username>
+				<apigee.password>${password}</apigee.password>
+				<apigee.override>true</apigee.override>
+				<apigee.override.delay>15</apigee.override.delay>
+				<apigee.options>validate</apigee.options>
+				<apigee.tokenurl>${tokenurl}</apigee.tokenurl>
+				<apigee.authtype>${authtype}</apigee.authtype>
+			</properties>
+		</profile>
+
+	</profiles>
+</project>
+
+

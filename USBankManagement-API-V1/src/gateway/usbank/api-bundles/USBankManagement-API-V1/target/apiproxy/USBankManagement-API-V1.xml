@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="18" name="USBankManagement-API-V1">
+    <Basepaths>/getdevelopersapps</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1499157414797</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description>show all developer apps which have custom attribute “source=env"</Description>
+    <DisplayName>GetDevelopersApps</DisplayName>
+    <LastModifiedAt>1499157414797</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <Policies>
+        <Policy>CheckingCustomAttribute</Policy>
+        <Policy>ExtractBrandName</Policy>
+        <Policy>GetSourceAttValue</Policy>
+        <Policy>LogProxyError</Policy>
+        <Policy>LogProxyRequest</Policy>
+        <Policy>LogProxyResponse</Policy>
+        <Policy>LogTargetRequest</Policy>
+        <Policy>LogTargetResponse</Policy>
+        <Policy>Raise-Fault-Invalid-Authorization</Policy>
+        <Policy>Raise-Fault-InvalidBrandName</Policy>
+        <Policy>Raise-Fault-InvalidOrganization</Policy>
+        <Policy>Raise-Fault-ProcessingError</Policy>
+        <Policy>RaiseFault-ResourceNotFound</Policy>
+        <Policy>ReadKVMs</Policy>
+        <Policy>RemoveBrandNameFromURL</Policy>
+        <Policy>SetPayload-DeveloperApps</Policy>
+        <Policy>SetRequest-ApiProducts</Policy>
+        <Policy>SetRequest-Default</Policy>
+        <Policy>SetRequest-DeveloperApps</Policy>
+        <Policy>SetRequest-PassThrough</Policy>
+        <Policy>SetRequest-PostDeveloperApp</Policy>
+        <Policy>SettingPayload-PostDeveloperApp</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://FilterApiProducts.js</Resource>
+        <Resource>jsc://GetSourceAttValue.js</Resource>
+        <Resource>jsc://RemoveBrandNameFromURL.js</Resource>
+        <Resource>jsc://SetRequest-PostDevApp.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>MangementAPI</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
