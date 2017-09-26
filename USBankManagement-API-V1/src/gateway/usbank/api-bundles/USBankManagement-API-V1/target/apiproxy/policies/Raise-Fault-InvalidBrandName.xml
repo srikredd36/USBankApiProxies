@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="Raise-Fault-InvalidBrandName">
+    <DisplayName>Raise Fault-InvalidBrandName</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {
+                    "code" : "ERR-0002",
+                    "message" : "Invalid Business Line"
+            }
+            </Payload>
+            <StatusCode>404</StatusCode>
+            <ReasonPhrase>Invalid Business Line</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>
