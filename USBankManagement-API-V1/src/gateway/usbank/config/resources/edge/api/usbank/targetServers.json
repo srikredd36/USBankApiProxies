@@ -1,5 +1,5 @@
 {
-  "host": "api.enterprise1.apigee.com",
+  "host": "api.enterprise.apigee.com",
   "isEnabled": true,
   "name": "ManagementService",
   "port": 80,
