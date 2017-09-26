@@ -1,5 +1,5 @@
-{
-  "host": "api.enterprise.apigee.com",
+[	{
+  "host": "api.myjson.com",
   "isEnabled": true,
   "name": "ManagementService",
   "port": 80,
@@ -14,3 +14,5 @@
     }
 
 }
+
+]
