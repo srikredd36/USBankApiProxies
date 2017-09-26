@@ -12,7 +12,7 @@
 		},
 		{
 				"name": "ManagementServicePath",
-				"value": "\v1"
+				"value": "/v1"
 		}
 		
 		],
