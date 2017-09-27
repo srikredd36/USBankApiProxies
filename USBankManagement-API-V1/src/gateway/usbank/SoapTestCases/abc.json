@@ -1,0 +1,144 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {},
+    "id": "http://example.com/example.json",
+    "properties": {
+        "app": {
+            "id": "/properties/app",
+            "items": {
+                "id": "/properties/app/items",
+                "properties": {
+                    "accessType": {
+                        "id": "/properties/app/items/properties/accessType",
+                        "type": "string"
+                    },
+                    "apiProducts": {
+                        "id": "/properties/app/items/properties/apiProducts",
+                        "items": {},
+                        "type": "array"
+                    },
+                    "appFamily": {
+                        "id": "/properties/app/items/properties/appFamily",
+                        "type": "string"
+                    },
+                    "appId": {
+                        "id": "/properties/app/items/properties/appId",
+                        "type": "string"
+                    },
+                    "attributes": {
+                        "id": "/properties/app/items/properties/attributes",
+                        "items": {
+                            "id": "/properties/app/items/properties/attributes/items",
+                            "properties": {
+                                "name": {
+                                    "id": "/properties/app/items/properties/attributes/items/properties/name",
+                                    "type": "string"
+                                },
+                                "value": {
+                                    "id": "/properties/app/items/properties/attributes/items/properties/value",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "callbackUrl": {
+                        "id": "/properties/app/items/properties/callbackUrl",
+                        "type": "string"
+                    },
+                    "createdAt": {
+                        "id": "/properties/app/items/properties/createdAt",
+                        "type": "integer"
+                    },
+                    "createdBy": {
+                        "id": "/properties/app/items/properties/createdBy",
+                        "type": "string"
+                    },
+                    "credentials": {
+                        "id": "/properties/app/items/properties/credentials",
+                        "items": {
+                            "id": "/properties/app/items/properties/credentials/items",
+                            "properties": {
+                                "apiProducts": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/apiProducts",
+                                    "items": {
+                                        "id": "/properties/app/items/properties/credentials/items/properties/apiProducts/items",
+                                        "properties": {
+                                            "apiproduct": {
+                                                "id": "/properties/app/items/properties/credentials/items/properties/apiProducts/items/properties/apiproduct",
+                                                "type": "string"
+                                            },
+                                            "status": {
+                                                "id": "/properties/app/items/properties/credentials/items/properties/apiProducts/items/properties/status",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "attributes": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/attributes",
+                                    "items": {},
+                                    "type": "array"
+                                },
+                                "consumerKey": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/consumerKey",
+                                    "type": "string"
+                                },
+                                "consumerSecret": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/consumerSecret",
+                                    "type": "string"
+                                },
+                                "issuedAt": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/issuedAt",
+                                    "type": "integer"
+                                },
+                                "scopes": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/scopes",
+                                    "items": {},
+                                    "type": "array"
+                                },
+                                "status": {
+                                    "id": "/properties/app/items/properties/credentials/items/properties/status",
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "developerId": {
+                        "id": "/properties/app/items/properties/developerId",
+                        "type": "string"
+                    },
+                    "lastModifiedAt": {
+                        "id": "/properties/app/items/properties/lastModifiedAt",
+                        "type": "integer"
+                    },
+                    "lastModifiedBy": {
+                        "id": "/properties/app/items/properties/lastModifiedBy",
+                        "type": "string"
+                    },
+                    "name": {
+                        "id": "/properties/app/items/properties/name",
+                        "type": "string"
+                    },
+                    "scopes": {
+                        "id": "/properties/app/items/properties/scopes",
+                        "items": {},
+                        "type": "array"
+                    },
+                    "status": {
+                        "id": "/properties/app/items/properties/status",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "type": "array"
+        }
+    },
+    "type": "object"
+}
