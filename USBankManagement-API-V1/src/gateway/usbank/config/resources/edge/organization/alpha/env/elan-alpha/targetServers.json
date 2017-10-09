@@ -8,9 +8,9 @@
         "clientAuthEnabled": "true",
         "enabled": "true",
         "ignoreValidationErrors": true,
-      "keyAlias": "ESBKeystore",
-      "keyStore": "ESBKeystore",
-        "protocols": []
+        "protocols": [],
+		 "keyAlias": "",
+      "keyStore": "Elan-Keystore-07192017"
     }
 
 }

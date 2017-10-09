@@ -8,8 +8,8 @@
         "clientAuthEnabled": "true",
         "enabled": "true",
         "ignoreValidationErrors": true,
-      "keyAlias": "ESBKeystore",
-      "keyStore": "ESBKeystore",
+      "keyAlias": "",
+      "keyStore": "fsv-prod-keystore-08292017",
         "protocols": []
     }
 

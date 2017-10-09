@@ -8,8 +8,8 @@
         "clientAuthEnabled": "true",
         "enabled": "true",
         "ignoreValidationErrors": true,
-      "keyAlias": "ESBKeystore",
-      "keyStore": "ESBKeystore",
+      "keyAlias": "",
+      "keyStore": "Super-alpha-Keystore-07192017",
         "protocols": []
     }
 
